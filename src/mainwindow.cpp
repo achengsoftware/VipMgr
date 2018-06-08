@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_basewindow.h"
+#include "ui/addmemberarea.h"
+#include "ui/defaultinfoarea.h"
 #include<QDebug>
 MainWindow::MainWindow(QWidget *parent) :
     BaseWindow(parent)
@@ -24,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->verticalLayout->setContentsMargins(1,1,1,1);
     connect(ui->btnExit,SIGNAL(clicked()),this,SLOT(onBtnClose()));
     initMenu();
-
+    initContextAreaWidgets();
 }
 
 
@@ -38,6 +40,12 @@ void MainWindow::onSetBoxItem(void *object)
         }
     }
     MToolBtn* btn = (MToolBtn*)object;
+    QWidget* widget = mMapContextAreas.value(btn->BtnId,NULL);
+    if(widget){
+        mStackedWidget->setCurrentWidget(widget);
+    }else{
+        mStackedWidget->setCurrentIndex(0);
+    }
     qDebug()<<Q_FUNC_INFO<<btn->title()<<","<<btn->BtnId;
 }
 
@@ -165,4 +173,15 @@ void MainWindow::getTabInfo(MGRTYPE type, QString &icon, QString &text)
         break;
     }
     }
+}
+
+void MainWindow::initContextAreaWidgets()
+{
+    AddMemberArea* addMemberWidget = new AddMemberArea(mStackedWidget);
+    DefaultInfoArea* defaultWidget = new DefaultInfoArea(mStackedWidget);
+    mStackedWidget->addWidget(defaultWidget);
+    mStackedWidget->addWidget(addMemberWidget);
+    mMapContextAreas.insert(TASK_TYPE_ADD_MEMBER,addMemberWidget);
+    mMapContextAreas.insert(-1,defaultWidget);
+    mStackedWidget->setCurrentIndex(0);
 }

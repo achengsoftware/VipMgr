@@ -20,7 +20,9 @@ SOURCES += main.cpp\
     controls/mtoolbtn.cpp \
     controls/menubutton.cpp \
     core/windowmanagar.cpp \
-    core/systemtray.cpp
+    core/systemtray.cpp \
+    ui/addmemberarea.cpp \
+    ui/defaultinfoarea.cpp
 
 HEADERS  += basewindow.h \
     loginwindow.h \
@@ -30,10 +32,14 @@ HEADERS  += basewindow.h \
     controls/menubutton.h \
     data/taskData.h \
     core/windowmanagar.h \
-    core/systemtray.h
+    core/systemtray.h \
+    ui/addmemberarea.h \
+    ui/defaultinfoarea.h
 
 FORMS    += basewindow.ui \
-    loginwindow.ui
+    loginwindow.ui \
+    ui/addmemberarea.ui \
+    ui/defaultinfoarea.ui
 
 RESOURCES += \
     images.qrc \

@@ -15,9 +15,14 @@ void WindowManagar::onLoginSuccess()
 {
     MainWindow* mainWin = new MainWindow();
     mWinMap.insert(MAIN_WIN,mainWin);
-    ((MainWindow*)mWinMap.value(LOGIN_WIN))->close();
 
-    connect(((SystemTray*)mWinMap.value(TARY_WIN)), SIGNAL(activated(QSystemTrayIcon::ActivationReason)), mainWin, SLOT(onIconIsActived(QSystemTrayIcon::ActivationReason)));
+    SystemTray* tray = (SystemTray*)mWinMap.value(TARY_WIN);
+    connect(tray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), mainWin, SLOT(onIconIsActived(QSystemTrayIcon::ActivationReason)));
+
+    LoginMainWindow* loginWin = (LoginMainWindow*)mWinMap.value(LOGIN_WIN);
+    disconnect(tray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), loginWin, SLOT(onIconIsActived(QSystemTrayIcon::ActivationReason)));
+    mWinMap.remove(LOGIN_WIN);
+    loginWin->close();
     mainWin->show();
 }
 
