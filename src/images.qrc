@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/win">
+        <file alias="exit">images/exit.png</file>
+        <file alias="max">images/max1.png</file>
+        <file alias="max-hover">images/max2.png</file>
+        <file alias="min">images/min.png</file>
+        <file alias="app">images/app.png</file>
+    </qresource>
+    <qresource prefix="/ctrl">
+        <file alias="clicksmall">images/controls/clicksmalllabel.png</file>
+        <file alias="set">images/controls/deviceSet.png</file>
+        <file alias="enter-small">images/controls/entersmalllabel.png</file>
+        <file alias="info">images/controls/info.png</file>
+        <file alias="main">images/controls/main.png</file>
+        <file alias="main-menu">images/controls/mainMenu.png</file>
+        <file alias="record">images/controls/record.png</file>
+        <file alias="small">images/controls/smalllabel.png</file>
+        <file alias="sys-set">images/controls/sysSet.png</file>
+        <file alias="drawer-mu">images/controls/drawermenu.png</file>
+        <file alias="mn-down">images/controls/menu_down.png</file>
+        <file alias="mn-enter">images/controls/menu_enter.png</file>
+        <file alias="mn-leave">images/controls/menu_leave.png</file>
+    </qresource>
+</RCC>

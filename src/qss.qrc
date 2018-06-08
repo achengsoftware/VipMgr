@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file alias="linkdood">qss/linkdood.qss</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,42 @@
+﻿QToolBoxButton
+{
+    min-height:60px;
+}
+QToolBox
+{
+    icon-size:27px 27px;
+}
+QToolBox
+{
+    background-color:rgb(43,49,66);
+}
+QToolBox::tab
+{
+    color:white;
+    border:1px solid black;
+    padding-left:20px;
+    background-color: rgb(43,49,66);
+}
+QToolBox::tab:selected
+{
+    color:white;
+    border:1px solid black;
+    padding-left:20px;
+    background-color:rgb(10,80,103);
+}
+QToolBox::tab:hover:!selected
+{
+    color:white;
+    border:1px solid black;
+    padding-left:20px;
+    background-color:rgb(10,80,103);
+}
+QMainWindow
+{
+    background-color:black;
+    border:1px solid gray;
+}
+QStackedWidget
+{
+  background-color: white;
+}
