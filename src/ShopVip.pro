@@ -48,4 +48,5 @@ RESOURCES += \
     lang.qrc
 
 OTHER_FILES += \
-    qss/linkdood.qss
+    qss/linkdood.qss \
+    ShopVip.rc

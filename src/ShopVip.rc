@@ -20,13 +20,13 @@ VS_VERSION_INFO VERSIONINFO
         BEGIN
             BLOCK "080404b0"
             BEGIN
-                VALUE "CompanyName", "BeiJing XXXX Co., Ltd."
-                VALUE "FileDescription", "Industrial Control System"
+                VALUE "CompanyName", "会员管理系统"
+                VALUE "FileDescription", "VipMgr.exe"
                 VALUE "FileVersion", "1.0.0.0"
-                VALUE "InternalName", "Qt Studio.exe"
-                VALUE "LegalCopyright", "Copyright (C)2001-2013"
-                VALUE "OriginalFilename", "Qt Studio.exe"
-                VALUE "ProductName", "Qt Studio"
+                VALUE "InternalName", "VipMgr.exe"
+                VALUE "LegalCopyright", "Copyright (C)2018 西安成才软件工作室"
+                VALUE "OriginalFilename", "VipMgr.exe"
+                VALUE "ProductName", "会员管理系统"
                 VALUE "ProductVersion", "1.0.0.0"
             END
         END
