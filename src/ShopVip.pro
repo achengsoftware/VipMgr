@@ -8,9 +8,10 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = ShopVip
+TARGET = VipMgr
 TEMPLATE = app
 
+RC_FILE = ShopVip.rc
 
 SOURCES += main.cpp\
     basewindow.cpp \
